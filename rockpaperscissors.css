@@ -1,0 +1,58 @@
+html body {
+	background-color: #343a40;
+}
+
+h1 {
+	color: red;
+}
+
+#scoreBoard {
+	color: white;
+}
+
+.cpuScore{
+	margin-right: 20px;
+}
+
+.playerScore{
+	margin-left: 20px;
+}
+
+.row {
+	align-content: center;
+	justify-content: center;
+}
+
+img {
+	height: 200px;
+	width: 200px;
+	padding: 10px;
+}
+
+.container {
+	margin: 10px;
+}
+
+#cpuChoices {
+	left: 20px;
+	
+}
+
+#playerChoices {
+	right: 20px;
+	
+}
+
+#playerChoices img:hover {
+	height: 250px;
+	width: 250px;
+	cursor: pointer;
+}
+
+#btns {
+	margin-top: 50px;
+}
+
+button {
+	margin: 10px;
+}
