@@ -33,20 +33,9 @@ img {
 	margin: 10px;
 }
 
-#cpuChoices {
-	left: 20px;
-	
-}
-
 #playerChoices {
-	right: 20px;
+	margin: 200px 0 200px 0;
 	
-}
-
-#playerChoices img:hover {
-	height: 250px;
-	width: 250px;
-	cursor: pointer;
 }
 
 #btns {
