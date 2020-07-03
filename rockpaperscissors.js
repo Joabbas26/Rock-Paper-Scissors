@@ -9,28 +9,38 @@ function zoomOutImage(choice){
     choice.style.width = "200px";
 }
 
-//Function should detect which image was clicked, keep it at the 
-//same size and move on to the next function
-var User = function userChoice(user){
-    var user;
-    if (this === document.getElementByClassName('.userRock')) {
-        this.style.width = "250px";
-        this.style.height = "250px";
-        return 0;
-    }
-    else if (this === document.getElementByClassName('.userPaper')) {
-        this.style.width = "250px";
-        this.style.height = "250px";
-        return 1;
-    }
-    else {
-        this.style.width = "250px";
-        this.style.height = "250px";
-        return 2;
-    }
-    computerChoice();
-    compare(computer, user);
+//Used to calculate the score of each player
+var playerScore = 0;
+var cpuScore = 0;
+
+//Should detect which image was clicked, keep it at the 
+//same size and set user variable to respective number
+var user = 0;
+var rockChoice = document.getElementByClassName('.userRock');
+var paperChoice = document.getElementByClassName('.userPaper');
+var scissorsChoice = document.getElementByClassName('.userScissors');
+
+var onRockChoice = function(user){
+    rockChoice.style.width = "250px";
+    rockChoice.style.height = "250px";
+    return 0;
 }
+
+var onPaperChoice = function(user){
+    paperChoice.style.width = "250px";
+    paperChoice.style.height = "250px";
+    return 1;
+}
+
+var onScissorsChoice = function(user){
+    scissorsChoice.style.width = "250px";
+    scissorsChoice.style.height = "250px";
+    return 2;
+}
+
+rockChoice.addEventListener("click", onRockChoice);
+paperChoice.addEventListener("click", onPaperChoice);
+scissorsChoice.addEventListener("click", onScissorsChoice);
 
 
 //Generates a random number and uses it to assign 0, 1 or 2 to rock, 
@@ -83,3 +93,14 @@ if(user === 2) {
 }
 }
 }
+
+//When button pressed it will begin a new game with same score
+function newGame() {
+
+}
+
+//When button is pressed it will reset the score and begin a new game
+function resetGame() {
+
+}
+
