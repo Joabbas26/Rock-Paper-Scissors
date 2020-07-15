@@ -26,17 +26,20 @@
 		<!--Player choices-->
 		<div class="container" id="playerChoices">
 			<div class="row">
-				<img src="Rock Selection.png" class="userRock" >
-				<img src="Paper Selection.png" class="userPaper">
-				<img src="Scissors Selection.png" class="userScissors">
+				<button><img src="Rock Selection.png" class="userRock" ></button>
+				<button><img src="Paper Selection.png" class="userPaper"></button>
+				<button><img src="Scissors Selection.png" class="userScissors"></button>
 			</div>
 		</div>
+			<div class="row">
+				<h2 class="winningMessage">Rock Wins!</h1>
+			</div>
 	</div>
 	<!--Restart and reset buttons-->
 	<div class="container">
 		<div class="row" id="btns">
-			<button class="btn btn-primary" id="restart" onclick="RestartGame()">New Game</button>
-			<button class="btn btn-danger" id="reset" onclick=" ResetGame()">Reset</button>
+			<button class="btn btn-primary" id="restart" onclick="newGame()">New Game</button>
+			<button class="btn btn-danger" id="reset" onclick=" resetGame()">Reset</button>
 		</div>
 	</div>
 	<script src="rockpaperscissors.js"></script>

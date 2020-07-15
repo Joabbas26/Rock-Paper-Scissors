@@ -6,6 +6,10 @@ h1 {
 	color: red;
 }
 
+h2 {
+	color: white;
+}
+
 #scoreBoard {
 	color: white;
 }
@@ -29,12 +33,21 @@ img {
 	padding: 10px;
 }
 
+button {
+	background-color: transparent;
+	background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+	outline: none;
+}
+
 .container {
 	margin: 10px;
 }
 
 #playerChoices {
-	margin: 200px 0 200px 0;
+	margin: 150px 0 150px 0;
 	
 }
 
@@ -42,6 +55,6 @@ img {
 	margin-top: 50px;
 }
 
-button {
+#restart, #reset {
 	margin: 10px;
 }
