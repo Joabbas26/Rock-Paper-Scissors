@@ -10,8 +10,8 @@ var playerScore = 0;
 var cpuScore = 0;
 
 //Display the 2 choices and who won
-var battleMessage = document.getElementsByClassName('battleMessage');
-var winningMessage = document.getElementsByClassName('winningMessage');
+var battleMessage = document.getElementById('battleMessage');
+var winningMessage = document.getElementById('winningMessage');
 
 //Results of each game
 var draw = "It's a Draw";
@@ -45,9 +45,6 @@ scissors.addEventListener("click", function scissorsChoice(){
 
 //Function called to begin the game
 function game(userChoice){
-    console.log("Computer Choice is: " + ComputerChoice);
-    console.log("User choice is: " + userChoice);
-    
     if (userChoice === "rock") {   
         if (ComputerChoice === "rock") {
             battleMessage.innerHTML = "Rock vs Rock";
@@ -56,16 +53,19 @@ function game(userChoice){
         else if (ComputerChoice === "paper") {
             battleMessage.innerHTML = "Rock vs Paper";
             winningMessage.innerHTML = cpuWin;
+            cpuScore += 1;
         }
         else {
             battleMessage.innerHTML = "Rock vs Scissors";
             winningMessage.innerHTML = userWin;
+            playerScore += 1;
         }
     }
     else if (userChoice === "paper") {
         if (ComputerChoice === "rock") {
             battleMessage.innerHTML = "Paper vs Rock";
             winningMessage.innerHTML = userWin;
+            playerScore += 1;
         }
         else if (ComputerChoice === "paper") {
             battleMessage.innerHTML = "Paper vs Paper";
@@ -74,16 +74,19 @@ function game(userChoice){
         else {
             battleMessage.innerHTML = "Paper vs Scissors";
             winningMessage.innerHTML = cpuWin;
+            cpuScore += 1;
         }
     }
     else {
         if (ComputerChoice === "scissors") {
             battleMessage.innerHTML = "Scissors vs Rock";
             winningMessage.innerHTML = cpuWin;
+            cpuScore += 1;
         }
         else if (ComputerChoice === "paper") {
             battleMessage.innerHTML = "Scissors vs Paper";
             winningMessage.innerHTML = userWin;
+            playerScore += 1;
         }
         else {
             battleMessage.innerHTML = "Scissors vs Scissors";
